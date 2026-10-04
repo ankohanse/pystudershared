@@ -1,0 +1,17 @@
+[tool.unasyncd]
+remove_unused_imports = false
+no_cache = false
+force_regen = false
+add_editors_note = true
+exclude = [
+    "Something",
+    "SomethingElse.within"
+]
+
+[tool.unasyncd.files]
+    "src/pystudershared/interfaces_async.py" = "src/pystudershared/interfaces_sync.py"
+
+[tool.unasyncd.add_replacements]
+    "AsyncStuderApi" = "StuderApi"
+    "AsyncStuderDiscover" = "StuderDiscover"
+
